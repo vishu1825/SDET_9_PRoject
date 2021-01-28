@@ -19,7 +19,7 @@ public class FileUtility {
 	 */
 	public String getPropertyKeyValue(String key) throws Throwable  {
 		  
-			FileInputStream fis = new FileInputStream("");
+			FileInputStream fis = new FileInputStream("./testData/commonData.properties");
 			 Properties pObj = new Properties();
 			 pObj.load(fis);
 			 String value = pObj.getProperty(key);

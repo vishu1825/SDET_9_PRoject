@@ -58,6 +58,24 @@ public class WebDriverUtiles {
 	}
 	
 	/**
+	 * used to wait for expected element in GUI
+	 * @param element
+	 * @throws Throwable
+	 */
+	public void waitforElement( WebElement element) throws Throwable {
+		  int count = 0;
+	        while(count < 40) {
+			   try {
+				   element.isDisplayed();
+			     break;
+			   }catch (Throwable e) {
+				Thread.sleep(500);
+				count++;
+			   }
+	        }
+	}
+	
+	/**
 	 * SWitch to Requried Window based on title Paremeter
 	 * @param driver
 	 * @param partailWindowTitle

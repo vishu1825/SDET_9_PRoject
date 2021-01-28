@@ -28,8 +28,11 @@ public class ExcelUtility {
  * @throws EncryptedDocumentException 
  * @throws Throwable
     */
+	
+	String filePath = "./testData/TestData.xlsx";
+	
 	public String getExcelData(String shettName , int rowNum , int colNum) throws Throwable {
-		FileInputStream fis = new FileInputStream("");
+		FileInputStream fis = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(shettName);
 		Row row = sh.getRow(rowNum);
@@ -38,6 +41,25 @@ public class ExcelUtility {
 				
 	}
 	
+/**
+ * 
+ * @param filePath
+ * @param shettName
+ * @param rowNum
+ * @param colNum
+ * @return
+ * @throws Throwable
+ */
+	
+	public String getExcelData(String filePath, String shettName , int rowNum , int colNum) throws Throwable {
+		FileInputStream fis = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(fis);
+		Sheet sh = wb.getSheet(shettName);
+		Row row = sh.getRow(rowNum);
+		wb.close();
+		return row.getCell(colNum).getStringCellValue();
+				
+	}
 	/**
 	 * used to read the data from excel workbook based on testId & ColumnHeader
 	 * @param sheetName
@@ -50,7 +72,7 @@ public class ExcelUtility {
 		
 				int expTestRow = 0;
 				int expHeader = 0;
-				FileInputStream fis = new FileInputStream("");
+				FileInputStream fis = new FileInputStream(filePath);
 				Workbook wb = WorkbookFactory.create(fis);
 				Sheet sh = wb.getSheet(sheetName);
 				int rowCount = sh.getLastRowNum();
@@ -92,13 +114,13 @@ public class ExcelUtility {
 	 */
 	
 	public void setExcelData(String shettName , int rowNum , int colNum ,String data) throws Throwable {
-		FileInputStream fis = new FileInputStream("");
+		FileInputStream fis = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(shettName);
 		Row row = sh.getRow(rowNum);
 		Cell cel = row.createCell(colNum);
 		cel.setCellValue(data);
-		FileOutputStream fos = new FileOutputStream("");
+		FileOutputStream fos = new FileOutputStream(filePath);
 				wb.write(fos);
 		wb.close();
 	}
@@ -109,7 +131,7 @@ public class ExcelUtility {
 	 * @throws Throwable
 	 */
 	public int getRowCount(String shettName)throws Throwable {
-		FileInputStream fis = new FileInputStream("");
+		FileInputStream fis = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(shettName);
 	
