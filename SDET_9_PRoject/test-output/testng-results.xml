@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33524" started-at="2021-01-25T08:36:47Z" finished-at="2021-01-25T08:37:20Z">
+  <suite name="Default suite" duration-ms="29022" started-at="2021-01-28T10:50:40Z" finished-at="2021-01-28T10:51:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33524" started-at="2021-01-25T08:36:47Z" finished-at="2021-01-25T08:37:20Z">
-      <class name="com.crm.autodesk.contacttest.CreateContact">
-        <test-method status="PASS" signature="createContactWitORgTest()[pri:0, instance:com.crm.autodesk.contacttest.CreateContact@20d3d15a]" name="createContactWitORgTest" duration-ms="33461" started-at="2021-01-25T08:36:47Z" finished-at="2021-01-25T08:37:20Z">
+    <test name="Default test" duration-ms="29022" started-at="2021-01-28T10:50:40Z" finished-at="2021-01-28T10:51:09Z">
+      <class name="com.pratice.SampleTest_WithOut_POM">
+        <test-method status="PASS" signature="createOrgTest()[pri:0, instance:com.pratice.SampleTest_WithOut_POM@214b199c]" name="createOrgTest" duration-ms="28959" started-at="2021-01-28T10:50:40Z" finished-at="2021-01-28T10:51:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createContactWitORgTest -->
-      </class> <!-- com.crm.autodesk.contacttest.CreateContact -->
+        </test-method> <!-- createOrgTest -->
+      </class> <!-- com.pratice.SampleTest_WithOut_POM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

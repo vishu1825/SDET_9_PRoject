@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.autodesk.contacttest.CreateContact">
+      <class name="com.pratice.SampleTest_WithOut_POM">
         <methods>
-          <include name="createContactWitORgTest"/>
+          <include name="createOrgTest"/>
         </methods>
-      </class> <!-- com.crm.autodesk.contacttest.CreateContact -->
+      </class> <!-- com.pratice.SampleTest_WithOut_POM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

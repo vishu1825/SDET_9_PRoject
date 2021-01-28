@@ -86,11 +86,16 @@ public class CreateContact {
 		/* step 4 : create new Organization with inductry & type, rating */
 		    CreateNewOrganization createOrgPage = new CreateNewOrganization(driver);
 		    createOrgPage.creatOrganization(orgName, orgIndustry, orgType, orgRating);
+		    
+		  /*verify */
+		    OrganizationInfo info = new OrganizationInfo(driver);
+		    String actSuccessfullMsg = info.getSuccessFullMsg().getText();
+		    Assert.assertTrue(actSuccessfullMsg.contains(orgName));
 
-		/* step 5 : verify the ORganization name */
+		/* step 5 :  navigate to Contact page */
 		    hp.getContactLnk().click();
 
-		/* step 6 : navigate to Contact page */
+		/* step 6 : navigate to create Contact page */
 		    Contacts cp = new Contacts(driver);
 		    cp.getCreateOrgImg().click();
 
