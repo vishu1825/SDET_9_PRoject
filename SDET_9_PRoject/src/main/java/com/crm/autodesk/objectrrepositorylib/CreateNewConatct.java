@@ -29,7 +29,15 @@ public class CreateNewConatct extends WebDriverUtiles{
 	@FindBy(xpath = "//input[@title='Save [Alt+S]']")
 	private WebElement saveBtn;
 	
+	
+	/**
+	 * 
+	 * @param lastName
+	 * @param orgName
+	 * @param serachDropOtp
+	 */
 	public  void createConatct(String lastName , String orgName , String serachDropOtp) {
+		waitforElementToBeClickable(driver, lastNameEdt);
 		lastNameEdt.sendKeys(lastName);
 		organizationLookUpImage.click();
 		//swicth to Child
