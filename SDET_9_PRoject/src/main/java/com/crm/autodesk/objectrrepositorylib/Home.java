@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.crm.autodesk.genericlib.BaseClass;
 import com.crm.autodesk.genericlib.WebDriverUtiles;
 /**
  * 
@@ -38,6 +39,24 @@ public class Home  extends WebDriverUtiles{
 	
 	@FindBy(linkText = "Products")
     private WebElement productlnk;
+	
+	public WebElement getProductlnk() {
+		return productlnk;
+	}
+
+	@FindBy(linkText="More")
+	private WebElement moreLink;
+	
+	@FindBy(name="Quotes")
+	private WebElement quoteLink;
+
+	public WebElement getQuoteLink() {
+		return quoteLink;
+	}
+
+	public WebElement getMoreLink() {
+		return moreLink;
+	}
 
 	public WebElement getContactLnk() {
 		return contactLnk;

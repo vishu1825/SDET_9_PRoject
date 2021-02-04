@@ -16,8 +16,9 @@ public class OrganizationInfo {
 
 
 	public WebElement getSuccessFullMsg() {
-		return successFullMsg;
+	return successFullMsg;
 	}
+	
 	
 	
 }

@@ -7,71 +7,76 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.mysql.cj.jdbc.Driver;
+
 /**
  * 
- * @author Deepak
+ * @author Vishwajeet
  *
  */
 public class DatabaseUtils {
-	
-	
-	/**
-	 * used to execute select database query & retrun table in the form of ResultSet 
-	 * @param query
-	 * @return ResultSet
-	 * @throws SQLException 
-	 */
-	public ResultSet executeDBSelectQuery(String query) throws SQLException {
-		Connection con = null;
-		ResultSet result = null;
+	Connection con = null;
+	ResultSet result = null;
+
+	public void connectToDB() {
+		Driver driverRef;
 		try {
-			//step 1 : rigester the database 
-		      Driver mysqlDriverR = new Driver();
-		      DriverManager.registerDriver(mysqlDriverR);
-			//step 2 : connect to database 
-		        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/projects","root","root");  
-			//step 3 : create a statement ref
-		       Statement stat = con.createStatement();		       		       
-			//step 4: execute Query
-		       result=  stat.executeQuery(query);
-		     
-		}catch (Exception e) {
-				System.err.println("query is invalid");
-		}finally {
-				//step 5: close the conection
-			 con.close();
-			 System.out.println("close");
+			driverRef = new Driver();
+			DriverManager.registerDriver(driverRef);
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/projects", "root", "root");
+		} catch (SQLException e) {
+
+			e.printStackTrace();
 		}
-		return result;
+
+	}
+
+	public void closeDb() throws SQLException {
+		con.close();
 	}
 
 	/**
-	 *   used to execute non select database query & return int, if 0==> invalid query , 1==> executed successfully
+	 * getDataFromDB method to retrieve data from database as key value pairs
+	 * 
 	 * @param query
-	 * @return
 	 * @throws SQLException
+	 * @throws ClassNotFoundException
+	 * @throws IllegalAccessException
+	 * @throws InstantiationException
 	 */
-	public int  executeNonSelectQuery(String query) throws SQLException {
-		Connection con = null;
-		 int result=0;
-			try {
-			      Driver mysqlDriverR = new Driver();
-			      DriverManager.registerDriver(mysqlDriverR);
-			        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/projects","root","root");
-			       Statement stat = con.createStatement();
-			       result=  stat.executeUpdate(query);
-			           if(result==1) {
-			        	   System.out.println("query successfully executed");
-			           }                
-			}catch (Exception e) {
-				if(result==0) {
-					System.err.println("invaid query");
-				}
-					System.out.println(result);
-			}finally {
-				 con.close();
-				 System.out.println("close");
-			}
-       return result;
+	public ResultSet execyteQuery(String query) throws Throwable {
+
+		try {
+			// executing the query
+			result = con.createStatement().executeQuery(query);
+			return result;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+
+		}
+		return result;
+
 	}
+
+	public String executeQueryAndGetData(String query, int columnName, String expectedData) throws Throwable {
+		boolean flag = false;
+		result = con.createStatement().executeQuery(query);
+
+		while (result.next()) {
+			if (result.getString(columnName).equals(expectedData)) {
+				flag = true;
+				break;
+			}
+		}
+
+		if (flag) {
+			System.out.println(expectedData + "===> data verified in data base table");
+			return expectedData;
+		} else {
+			System.out.println(columnName + "===> data not verified in data base table");
+			return expectedData;
+		}
+
+	}
+
 }

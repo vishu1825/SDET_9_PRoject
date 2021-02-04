@@ -9,6 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.autodesk.genericlib.WebDriverUtiles;
 
+/**
+ * 
+ * @author Vishwajeet
+ *
+ */
+
 public class CreateNewConatct extends WebDriverUtiles{
 	
 	WebDriver driver;
@@ -55,14 +61,13 @@ public class CreateNewConatct extends WebDriverUtiles{
 	public  void createConatct(String lastName , String orgName ) {
 		lastNameEdt.sendKeys(lastName);
 		organizationLookUpImage.click();
-		//swicth to Child
+		//switch to Child
 		swicthToWindow(driver, "Accounts&action");
 		Organizations orgPage = new Organizations(driver);
-
 		orgPage.getSearchEdt().sendKeys(orgName);
 		orgPage.getSearchNow().click();
 		driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();
-		//swict to Parent
+		//switch to Parent
 		swicthToWindow(driver, "Contacts");
 		saveBtn.click();
 	}

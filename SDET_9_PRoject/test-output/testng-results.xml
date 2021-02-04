@@ -1,17 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29022" started-at="2021-01-28T10:50:40Z" finished-at="2021-01-28T10:51:09Z">
+  <suite name="Default suite" duration-ms="146386" started-at="2021-02-04T13:25:32Z" finished-at="2021-02-04T13:27:58Z">
     <groups>
+      <group name="regressionTest">
+        <method signature="CreateProduct4.seach_Product_By_CommissionRate()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="seach_Product_By_CommissionRate" class="com.crm.autodesk.producttest.CreateProduct4"/>
+        <method signature="CreateProduct4.seach_Product_By_ProductName()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="seach_Product_By_ProductName" class="com.crm.autodesk.producttest.CreateProduct4"/>
+      </group> <!-- regressionTest -->
     </groups>
-    <test name="Default test" duration-ms="29022" started-at="2021-01-28T10:50:40Z" finished-at="2021-01-28T10:51:09Z">
-      <class name="com.pratice.SampleTest_WithOut_POM">
-        <test-method status="PASS" signature="createOrgTest()[pri:0, instance:com.pratice.SampleTest_WithOut_POM@214b199c]" name="createOrgTest" duration-ms="28959" started-at="2021-01-28T10:50:40Z" finished-at="2021-01-28T10:51:09Z">
+    <test name="Default test" duration-ms="146386" started-at="2021-02-04T13:25:32Z" finished-at="2021-02-04T13:27:58Z">
+      <class name="com.crm.autodesk.producttest.CreateProduct4">
+        <test-method status="PASS" signature="configBC()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configBC" is-config="true" duration-ms="5022" started-at="2021-02-04T18:55:32Z" finished-at="2021-02-04T18:55:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOrgTest -->
-      </class> <!-- com.pratice.SampleTest_WithOut_POM -->
+        </test-method> <!-- configBC -->
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configBM" is-config="true" duration-ms="16663" started-at="2021-02-04T18:55:37Z" finished-at="2021-02-04T18:55:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method status="PASS" signature="seach_Product_By_CommissionRate()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="seach_Product_By_CommissionRate" duration-ms="33957" started-at="2021-02-04T18:55:54Z" finished-at="2021-02-04T18:56:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seach_Product_By_CommissionRate -->
+        <test-method status="PASS" signature="configAm()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configAm" is-config="true" duration-ms="2824" started-at="2021-02-04T18:56:27Z" finished-at="2021-02-04T18:56:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAm -->
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configBM" is-config="true" duration-ms="4158" started-at="2021-02-04T18:56:30Z" finished-at="2021-02-04T18:56:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method status="PASS" signature="seach_Product_By_PartNumber()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="seach_Product_By_PartNumber" duration-ms="17003" started-at="2021-02-04T18:56:34Z" finished-at="2021-02-04T18:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seach_Product_By_PartNumber -->
+        <test-method status="PASS" signature="configAm()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configAm" is-config="true" duration-ms="2079" started-at="2021-02-04T18:56:51Z" finished-at="2021-02-04T18:56:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAm -->
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configBM" is-config="true" duration-ms="4344" started-at="2021-02-04T18:56:54Z" finished-at="2021-02-04T18:56:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method status="PASS" signature="seach_Product_By_ProductName()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="seach_Product_By_ProductName" duration-ms="14323" started-at="2021-02-04T18:56:58Z" finished-at="2021-02-04T18:57:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seach_Product_By_ProductName -->
+        <test-method status="PASS" signature="configAm()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configAm" is-config="true" duration-ms="3128" started-at="2021-02-04T18:57:12Z" finished-at="2021-02-04T18:57:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAm -->
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configBM" is-config="true" duration-ms="4330" started-at="2021-02-04T18:57:15Z" finished-at="2021-02-04T18:57:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method status="PASS" signature="seach_Product_By_ProductNo()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="seach_Product_By_ProductNo" duration-ms="15573" started-at="2021-02-04T18:57:20Z" finished-at="2021-02-04T18:57:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seach_Product_By_ProductNo -->
+        <test-method status="PASS" signature="configAm()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configAm" is-config="true" duration-ms="2222" started-at="2021-02-04T18:57:35Z" finished-at="2021-02-04T18:57:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAm -->
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configBM" is-config="true" duration-ms="4035" started-at="2021-02-04T18:57:37Z" finished-at="2021-02-04T18:57:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method status="PASS" signature="seach_Product_By_QtyInStock()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="seach_Product_By_QtyInStock" duration-ms="15011" started-at="2021-02-04T18:57:41Z" finished-at="2021-02-04T18:57:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seach_Product_By_QtyInStock -->
+        <test-method status="PASS" signature="configAm()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configAm" is-config="true" duration-ms="1640" started-at="2021-02-04T18:57:57Z" finished-at="2021-02-04T18:57:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAm -->
+        <test-method status="PASS" signature="configAC()[pri:0, instance:com.crm.autodesk.producttest.CreateProduct4@224edc67]" name="configAC" is-config="true" duration-ms="52" started-at="2021-02-04T18:57:58Z" finished-at="2021-02-04T18:57:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- com.crm.autodesk.producttest.CreateProduct4 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

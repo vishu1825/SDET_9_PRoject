@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.pratice.SampleTest_WithOut_POM">
+      <class name="com.crm.autodesk.producttest.CreateProduct4">
         <methods>
-          <include name="createOrgTest"/>
+          <include name="configAC"/>
+          <include name="configBC"/>
+          <include name="seach_Product_By_CommissionRate"/>
+          <include name="configAm"/>
+          <include name="configBM"/>
         </methods>
-      </class> <!-- com.pratice.SampleTest_WithOut_POM -->
+      </class> <!-- com.crm.autodesk.producttest.CreateProduct4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

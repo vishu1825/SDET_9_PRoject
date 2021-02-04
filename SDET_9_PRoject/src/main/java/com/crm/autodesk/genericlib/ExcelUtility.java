@@ -13,7 +13,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 /**
  * 
- * @author Deepak
+ * @author Vishwajeet
  *
  */
 public class ExcelUtility {
@@ -29,7 +29,7 @@ public class ExcelUtility {
  * @throws Throwable
     */
 	
-	String filePath = "./testData/TestData.xlsx";
+	String filePath = "./testData/TestData9.xlsx";
 	
 	public String getExcelData(String shettName , int rowNum , int colNum) throws Throwable {
 		FileInputStream fis = new FileInputStream(filePath);
@@ -138,6 +138,41 @@ public class ExcelUtility {
 		return sh.getLastRowNum();
 				
 	}
+	public double getExcelData1(String sheetName , String expTestID , String expColHEader) throws Throwable {
+		
+		int expTestRow = 0;
+		int expHeader = 0;
+		FileInputStream fis = new FileInputStream(filePath);
+		Workbook wb = WorkbookFactory.create(fis);
+		Sheet sh = wb.getSheet(sheetName);
+		int rowCount = sh.getLastRowNum();
+	    
+    for(int i=0; i<rowCount ; i++) {		
+		Row row = sh.getRow(i);
+		String zeroColData= row.getCell(0).getStringCellValue();
+        if(expTestID.contentEquals(zeroColData)) {
+        	//System.out.println("test is availbale");
+        	expTestRow = i;
+        	break;
+        }
+    }
+    
+    int expColHeader = expTestRow-1;
+    
+        int colCount = sh.getRow(expColHeader).getLastCellNum();
+         for(int j=0 ; j <colCount ; j++) {
+        	   String actColHeader = sh.getRow(expColHeader).getCell(j).getStringCellValue();
+        	   if(actColHeader.equals(expColHEader)) {
+        		        //System.out.println("header is avibale ");
+        		        expHeader = j;
+        		        break;
+        	   }
+         }
+         
+return sh.getRow(expTestRow).getCell(expHeader).getNumericCellValue();
+		
+}
+
 	
 	
 	

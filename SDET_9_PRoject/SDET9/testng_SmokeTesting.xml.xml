@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="com.pratice.GmailTest"/>
+      <class name="com.pratice.CalenderPopUP_Future_Date"/>
+      <class name="com.pratice.DynamicXpath_CalenderPopUP"/>
+      <class name="com.pratice.SampleTest_WithOut_POM"/>
+      <class name="com.crm.autodesk.contacttest.CreateContact"/>
+      <class name="com.pratice.MakeMyTrip"/>
+      <class name="com.pratice.CreateContact_Initial_Class"/>
+      <class name="com.crm.autodesk.producttest.CreateProduct4"/>
+      <class name="com.pratice.ProductPractice"/>
+      <class name="com.crm.autodesk.quotetest.CreateQuote"/>
+      <class name="com.pratice.SendAmount"/>
+      <class name="com.pratice.SampleTest"/>
+      <class name="com.pratice.DynamicXpath_CalenderPopUP_DataProvider"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
